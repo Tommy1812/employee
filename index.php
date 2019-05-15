@@ -1,3 +1,3 @@
 <?php
-    header('Location: https://tommyemployeesmanagement.herokuapp.com/EmployeeManagement/login.php');
+    header('Location: https://tommyemployeesmanagement.herokuapp.com/login.php');
 ?>
