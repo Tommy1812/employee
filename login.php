@@ -43,12 +43,13 @@
 ob_start();
 session_start();
 if(isset($_SESSION["username"]) && isset($_SESSION["role"])){
-	if($_SESSION["role"] == '1'){
-		header('Location: https://tommyemployeesmanagement.herokuapp.com/Admin/Admin_Account.php');
-	}
-	else if($_SESSION["role"] == '0'){
+	if($_SESSION["role"] == '0'){
 		header('Location: https://tommyemployeesmanagement.herokuapp.com/Employee/Announcement.php');
 	}
+    else if($_SESSION["role"] == '1'){
+		header('Location: https://tommyemployeesmanagement.herokuapp.com/Admin/Admin_Account.php');
+	}
+	
 }
 ?>
 
