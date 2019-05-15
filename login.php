@@ -44,10 +44,10 @@ ob_start();
 session_start();
 if(isset($_SESSION["username"]) && isset($_SESSION["role"])){
 	if($_SESSION["role"] == '1'){
-		header('Location: https://tommyemployeesmanagement.herokuapp.com/EmployeeManagement/Admin/Admin_Account.php');
+		header('Location: https://tommyemployeesmanagement.herokuapp.com/Admin/Admin_Account.php');
 	}
-	elseif($_SESSION["role"] == '0'){
-		header('Location: https://tommyemployeesmanagement.herokuapp.com/EmployeeManagement/Employee/Announcement.php');
+	else if($_SESSION["role"] == '0'){
+		header('Location: https://tommyemployeesmanagement.herokuapp.com/Employee/Announcement.php');
 	}
 }
 ?>
@@ -107,7 +107,7 @@ if(isset($_SESSION["username"]) && isset($_SESSION["role"])){
 				$_SESSION["username"]          = $_POST['username']; 
 				$_SESSION["password"]          = $_POST['password']; 
 				$_SESSION["role"]  = $output;
-				header("Location: https://tommyemployeesmanagement.herokuapp.com/EmployeeManagement/Admin/Admin_Account.php");
+				header("Location: https://tommyemployeesmanagement.herokuapp.com/Admin/Admin_Account.php");
 				
 			}
 			else if($output == "0")
@@ -116,7 +116,7 @@ if(isset($_SESSION["username"]) && isset($_SESSION["role"])){
 				$_SESSION["username"]          = $_POST['username'];
 				$_SESSION["password"]          = $_POST['password']; 
 				$_SESSION["role"]  = $output;
-				header("Location: https://tommyemployeesmanagement.herokuapp.com/EmployeeManagement/Employee/Announcement.php");
+				header("Location: https://tommyemployeesmanagement.herokuapp.com/Employee/Announcement.php");
 			}
 			else if($output == "99"){
 				?>
