@@ -4,10 +4,10 @@
 
 <?php
     if(!isset($_SESSION["username"])){
-        header("Location: https://employeesmanagement.herokuapp.com/EmployeeManagement/login.php");
+        header("Location: https://tommyemployeesmanagement.herokuapp.com/login.php");
     }
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://employeesmanagement.herokuapp.com/EmployeesManagement/rest/EmployeesManagement/Employee/GetListAnnouncement/");
+    curl_setopt($ch, CURLOPT_URL, "https://209.97.173.188:8081/EmployeesManagement/rest/EmployeesManagement/Employee/GetListAnnouncement/");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded')); // In Java: @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -36,7 +36,7 @@
                                                 ?>
                                                 <tr> 
                                                     <td><?= substr($a['datepost'], 0, 10);?></td>
-                                                    <td><a class="text-info" style ="cursor:pointer;" href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/ViewAnnouncement.php?title=<?=$a['title']?>"><?= $a['title']?></a></td>
+                                                    <td><a class="text-info" style ="cursor:pointer;" href="https://tommy209.97.173.188:8081/Admin/ViewAnnouncement.php?title=<?=$a['title']?>"><?= $a['title']?></a></td>
                                                 <tr>
                                                 <?php
                                                 }

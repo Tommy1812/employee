@@ -11,7 +11,7 @@
 <body style="background-color:powderblue;">
 <?php
  if(!isset($_SESSION["username"])){
-        header("Location: https://employeesmanagement.herokuapp.com/EmployeeManagement/login.php");
+        header("Location: https://tommyemployeesmanagement.herokuapp.com/login.php");
     }
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, "https://employeesmanagement.herokuapp.com/EmployeesManagement/rest/EmployeesManagement/Employee/GetListAnnouncement/");
@@ -46,9 +46,9 @@
                                     foreach($test as $a){
                                         
                                     ?> 
-                                        <div class = "row">
+                                        <div class = "row"> 
                                             <p class="col-md-6" style ="text-align:center"> <?= substr($a['datepost'], 0, 10);?></p>
-                                            <a class="col-md-6" style ="text-align:center;" href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Employee/ViewAnnouncement.php?title=<?=$a['title']?>">
+                                            <a class="col-md-6" style ="text-align:center;" href="https://tommyemployeesmanagement.herokuapp.com/Employee/ViewAnnouncement.php?title=<?=$a['title']?>">
                                                 <?= $a['title']?>
                                             </a>
                                         </div>

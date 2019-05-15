@@ -105,7 +105,7 @@
                                 $Year = $_POST['Year_select'];
                                 $Month = $_POST['Month_select'];
 
-                                header("Location: https://employeesmanagement.herokuapp.com/EmployeeManagement/Employee/Schedule/ViewSchedule.php?employeeid=". $NVID ."&year=". $Year."&month=". $Month);
+                                header("Location: https://tommyemployeesmanagement/EmployeeManagement/Employee/Schedule/ViewSchedule.php?employeeid=". $NVID ."&year=". $Year."&month=". $Month);
                             }
                         ?>
                     </div>

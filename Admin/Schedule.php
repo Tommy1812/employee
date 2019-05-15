@@ -4,10 +4,10 @@
 
 <?php
     if(!isset($_SESSION["username"])){
-        header("Location: https://employeesmanagement.herokuapp.com/EmployeeManagement/login.php");
+        header("Location: https://tommyemployeesmanagement.herokuapp.com/login.php");
     }
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://employeesmanagement.herokuapp.com/EmployeesManagement/rest/EmployeesManagement/getListEmployeeID/");
+    curl_setopt($ch, CURLOPT_URL, "https://209.97.173.188:8081/EmployeesManagement/rest/EmployeesManagement/getListEmployeeID/");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded')); // In Java: @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -21,7 +21,7 @@
 
     // get year
     $ch1 = curl_init();
-    curl_setopt($ch1, CURLOPT_URL, "https://employeesmanagement.herokuapp.com/EmployeesManagement/rest/EmployeesManagement/getYear/");
+    curl_setopt($ch1, CURLOPT_URL, "https://209.97.173.188:8081/EmployeesManagement/rest/EmployeesManagement/getYear/");
     curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch1, CURLOPT_POST, 1);
     curl_setopt($ch1, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded')); // In Java: @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -109,7 +109,7 @@
                                                     View
                                                 </button>
                                                 <button style="background-color: #4CAF50" class="btn btn-primary btn-sm">
-                                                    <i class="zmdi zmdi-plus"></i><a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Add_New_Schedule.php" style="color:white">Add</a>
+                                                    <i class="zmdi zmdi-plus"></i><a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Add_New_Schedule.php" style="color:white">Add</a>
                                                 </button>
                                             </div>
                                         </form>
@@ -124,7 +124,7 @@
                                 $GVID = $_POST['GV_select'];
                                 $Month = $_POST['Month_select'];
                                 $Year = $_POST['Year_select'];
-                                header("Location: https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/EmployeeSchedule/ViewSchedule.php?employeeid=". $GVID ."&year=". $Year."&month=".$Month);
+                                header("Location: https://tommyemployeesmanagement.herokuapp.com/Admin/EmployeeSchedule/ViewSchedule.php?employeeid=". $GVID ."&year=". $Year."&month=".$Month);
                             }
                         ?>
                     </div>

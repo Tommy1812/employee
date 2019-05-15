@@ -54,12 +54,12 @@
     ob_start();
     session_start();
     if(!isset($_SESSION["username"])){
-        header("Location: https://employeesmanagement.herokuapp.com/EmployeeManagement/login.php");
+        header("Location: https://tommyemployeesmanagement.herokuapp.com/login.php");
     }
     $username = $_SESSION["username"];
 
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://employeesmanagement.herokuapp.com/EmployeesManagement/rest/EmployeesManagement/Admin/ViewAdminInfomation/");
+    curl_setopt($ch, CURLOPT_URL, "https://209.97.173.188:8081/EmployeesManagement/rest/EmployeesManagement/Admin/ViewAdminInfomation/");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded')); // In Java: @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -112,7 +112,7 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="active">
-                            <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Admin_Account.php">
+                            <a href="https://tommy209.97.173.188:8081/Admin/Admin_Account.php">
                                 <i class="fas fa-user"></i>My Account</a>
                         </li>
                         <li class="has-sub">
@@ -120,19 +120,19 @@
                                 <i class="fas fa-bell"></i>Announcement</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Upload_Announcement.php">Upload new Announcement</a>
+                                    <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Upload_Announcement.php">Upload new Announcement</a>
                                 </li>
                                 <li>
-                                    <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/View_All_Announcement.php">View all Announcement</a>
+                                    <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/View_All_Announcement.php">View all Announcement</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Schedule.php">
+                            <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Schedule.php">
                                 <i class="fas fa-table"></i>Schedule</a>
                         </li>
                         <li>
-                            <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/EmployeeManagement.php">
+                            <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/EmployeeManagement.php">
                                 <i class="fas fa-users"></i>Employee Management</a>
                         </li>
                     </ul>
@@ -152,7 +152,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active">
-                            <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Admin_Account.php">
+                            <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Admin_Account.php">
                                 <i class="fas fa-user"></i>My Account</a>
                         </li>
                         <li class="has-sub">
@@ -160,23 +160,23 @@
                                 <i class="fas fa-bell"></i>Announcement</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Upload_Announcement.php">Upload new Announcement</a>
+                                    <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Upload_Announcement.php">Upload new Announcement</a>
                                 </li>
                                 <li>
-                                    <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/View_All_Announcement.php">View all Announcement</a>
+                                    <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/View_All_Announcement.php">View all Announcement</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Schedule.php">
+                            <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Schedule.php">
                                 <i class="fas fa-table"></i>Schedule</a>
                         </li>
                         <li>
-                            <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/EmployeeManagement.php">
+                            <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/EmployeeManagement.php">
                                 <i class="fas fa-users"></i>Employee Management</a>
                         </li>
 						<li>
-							<a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Salary.php">
+							<a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Salary.php">
                                 <i class="fas fa-users"></i>Salary</a>
 						</li>
                     </ul>
@@ -201,7 +201,7 @@
                                             <img src="images/icon/Tommy.jpg" alt="Khôi Nguyễn" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Admin_Account.php"><?php echo $username?></a>
+                                            <a class="js-acc-btn" href="https://tommyemployeesmanagement.herokuapp.com/Admin/Admin_Account.php"><?php echo $username?></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -212,19 +212,19 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Admin_Account.php"><?php echo $adminname?></a>
+                                                        <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Admin_Account.php"><?php echo $adminname?></a>
                                                     </h5>
                                                     <span class="email"><?php echo $adminemail?></span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
-                                                    <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Admin_Account.php">
+                                                    <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Admin_Account.php">
                                                         <i class="zmdi zmdi-account"></i>Account</a>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/logout.php">
+                                                <a href="https://tommyemployeesmanagement.herokuapp.com/logout.php">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>
@@ -374,7 +374,7 @@
                                 
                                 // Update Information
                                 $ch = curl_init();
-                                curl_setopt($ch, CURLOPT_URL, "https://employeesmanagement.herokuapp.com/EmployeesManagement/rest/EmployeesManagement/Admin/UpdateAdmin/");
+                                curl_setopt($ch, CURLOPT_URL, "https://209.97.173.188:8081/EmployeesManagement/rest/EmployeesManagement/Admin/UpdateAdmin/");
                                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                 curl_setopt($ch, CURLOPT_POST, 1);
                                 curl_setopt($ch, CURLOPT_HTTPHEADER , array(

@@ -43,10 +43,10 @@
     ob_start();
     session_start();
     if(!isset($_SESSION["username"])){
-        header("Location: https://employeesmanagement.herokuapp.com/EmployeeManagement/login.php");
+        header("Location: https://tommyemployeesmanagement.herokuapp.com/login.php");
     }
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://employeesmanagement.herokuapp.com/EmployeesManagement/rest/Teacher/ViewEmployeeInfomation/");
+    curl_setopt($ch, CURLOPT_URL, "https://209.97.173.188:8081/EmployeesManagement/rest/Teacher/ViewEmployeeInfomation/");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded')); // In Java: @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -133,7 +133,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Teacher/TeacherLogout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="https://tommyemployeesmanagement.herokuapp.com/Teacher/TeacherLogout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -317,7 +317,7 @@
                                                                 && isset($_POST['PASSWORD_INPUT'])){
                                     $ch = curl_init();
                                     curl_setopt( $ch, CURLOPT_ENCODING, "UTF-8" );
-                                    curl_setopt($ch, CURLOPT_URL, "https://employeesmanagement.herokuapp.com/EmployeesManagement/rest/Teacher/UpdatePersonalInfomation/");
+                                    curl_setopt($ch, CURLOPT_URL, "https://209.97.173.188:8081/EmployeesManagement/rest/Teacher/UpdatePersonalInfomation/");
                                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                     curl_setopt($ch, CURLOPT_POST, 1);
                                     curl_setopt($ch, CURLOPT_HTTPHEADER , array(

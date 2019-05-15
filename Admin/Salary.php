@@ -4,10 +4,10 @@
 
 <?php
     if(!isset($_SESSION["username"])){
-        header("Location: https://employeesmanagement.herokuapp.com/EmployeeManagement/login.php");
+        header("Location: https://tommyemployeesmanagement.herokuapp.com/login.php");
     }
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://employeesmanagement.herokuapp.com/EmployeesManagement/rest/EmployeesManagement/Admin/getListSalary/");
+    curl_setopt($ch, CURLOPT_URL, "https://209.97.173.188:8081/EmployeesManagement/rest/EmployeesManagement/Admin/getListSalary/");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded')); // In Java: @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -32,7 +32,7 @@
                                 <div class="table-data__tool">
                                     <div class="table-data__tool-left">
                                         <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                            <i class="zmdi zmdi-plus"></i><a href="https://employeesmanagement.herokuapp.com/EmployeeManagement/Admin/Add_New_Salary.php" style = "color:white;">Add</a></button>
+                                            <i class="zmdi zmdi-plus"></i><a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Add_New_Salary.php" style = "color:white;">Add</a></button>
                                     </div>
                                     <div class="table-data__tool-right">
                                         <form name="uploadfile" action="" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
@@ -109,7 +109,7 @@
                                         $test = str_replace("<br />","",$test);
                                        
 										$ch = curl_init();
-										curl_setopt($ch, CURLOPT_URL, "https://employeesmanagement.herokuapp.com/EmployeesManagement/rest/EmployeesManagement/Admin/ImportCSVSalary/");
+										curl_setopt($ch, CURLOPT_URL, "https://209.97.173.188:8081/EmployeesManagement/rest/EmployeesManagement/Admin/ImportCSVSalary/");
 										curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 										curl_setopt($ch, CURLOPT_POST, 1);
 										curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded')); // In Java: @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
