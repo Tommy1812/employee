@@ -46,9 +46,9 @@ if(isset($_SESSION["username"]) && isset($_SESSION["role"])){
 	if($_SESSION["role"] == '1'){
 		header('Location: https://tommyemployeesmanagement.herokuapp.com/Admin/Admin_Account.php');
 	}
-	/*else if($_SESSION["role"] == '0'){
+	else if($_SESSION["role"] == '0'){
 		header('Location: https://tommyemployeesmanagement.herokuapp.com/Employee/Announcement.php');
-	}*/
+	}
 }
 ?>
 
@@ -101,7 +101,7 @@ if(isset($_SESSION["username"]) && isset($_SESSION["role"])){
 			$info = curl_getinfo($ch);
 			curl_close($ch);
 			//If the server returns TRUE, then print something
-			if($output == "1")
+			if($output == "0")
 			{
 				//session_start();
 				$_SESSION["username"]          = $_POST['username']; 
@@ -110,14 +110,14 @@ if(isset($_SESSION["username"]) && isset($_SESSION["role"])){
 				header("Location: https://tommyemployeesmanagement.herokuapp.com/Admin/Admin_Account.php");
 				
 			}
-			/*else if($output == "0")
+			else if($output == "1")
 			{
 				//session_start();
 				$_SESSION["username"]          = $_POST['username'];
 				$_SESSION["password"]          = $_POST['password']; 
 				$_SESSION["role"]  = $output;
 				header("Location: https://tommyemployeesmanagement.herokuapp.com/Employee/Announcement.php");
-			}*/
+			}
 			else if($output == "99"){
 				?>
 			 		<script>
