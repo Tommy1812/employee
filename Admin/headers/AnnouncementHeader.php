@@ -76,7 +76,7 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li>
-                            <a href="https://tommyemployeesmanagement.herokuapp.com/EmployeeManagement/Admin/Admin_Account.php">
+                            <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Admin_Account.php">
                                 <i class="fas fa-user"></i>My Account</a>
                         </li>
                         <li class="has-sub">
@@ -84,19 +84,19 @@
                                 <i class="fas fa-bell"></i>Announcement</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="https://tommyemployeesmanagement.herokuapp.com/EmployeeManagement/Admin/Upload_Announcement.php">Upload new Announcement</a>
+                                    <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Upload_Announcement.php">Upload new Announcement</a>
                                 </li>
                                 <li>
-                                    <a href="https://tommyemployeesmanagement.herokuapp.com/EmployeeManagement/Admin/View_All_Announcement.php">View all Announcement</a>
+                                    <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/View_All_Announcement.php">View all Announcement</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="https://tommyemployeesmanagement.herokuapp.com/EmployeeManagement/Admin/Schedule.php">
+                            <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Schedule.php">
                                 <i class="fas fa-table"></i>Schedule</a>
                         </li>
                         <li>
-                            <a href="https://tommyemployeesmanagement.herokuapp.com/EmployeeManagement/Admin/Employee.php">
+                            <a href="https://tommyemployeesmanagement.herokuapp.com/Admin/Employee.php">
                                 <i class="fas fa-users"></i>Employee Management</a>
                         </li>
                     </ul>
